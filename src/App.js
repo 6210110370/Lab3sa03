@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import WordCard from './WordCard';
 import './App.css';
 
