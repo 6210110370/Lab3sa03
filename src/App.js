@@ -1,9 +1,13 @@
 import logo from './logo.svg';
+import WordCard from './WordCard';
 import './App.css';
+
 
 function App() {
   return (
-    <div>Hello World</div>
+    <div>
+        <WordCard value="hello"/>
+    </div>
   );
 }
 
