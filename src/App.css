@@ -1,6 +1,7 @@
 /*game*/
 .game {
-    margin:20px;
+    margin:20px auto auto;
+    max-width: 1025px;
 }
 /*header*/
 .head {
@@ -74,3 +75,28 @@
 }
 
 /*footer*/
+
+@media screen and (max-width:1025px){
+    .game {
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width:718px){
+    .game {
+        margin: 0;
+    }
+
+    .head {
+        margin-bottom: 0;
+        border-radius: 0;
+        border-style: solid;
+        border-width: 2px;
+    }
+
+    .contain {
+        border-radius: 0;
+        border-style: solid;
+        border-width: 0 2px 2px;
+    }
+}
