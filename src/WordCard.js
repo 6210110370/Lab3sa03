@@ -15,7 +15,6 @@ const prepareStateFromWord = (given_word) => {
 }
 
 export default function WordCard(props) {
-
     const [state, setState] = useState(prepareStateFromWord(props.value))
 
     const restart=()=> {
@@ -37,9 +36,17 @@ export default function WordCard(props) {
         }
     }
 
+    const mainClass = `mainGame ${state.completed ? 'inV' : ''}`
+    const winClass = ` ${state.completed ? 'winGame' : 'inV'}`
     return (
         <div className="contain">
-            <div className="mainGame">
+            <div className="attm">
+                <h3>Your attemp : {state.attempt}</h3>
+            </div>
+            <div className={winClass}>
+                <h1>YOU WIN</h1>
+            </div>
+            <div className={mainClass}>
             {
                 state.chars.map((c, i) =>
                     <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt = {state.attempt}/>
